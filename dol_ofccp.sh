@@ -1,4 +1,5 @@
 directory="data";[! -d "$directory" ] && mkdir "$directory"
+processed_directory="processed";[! -d "$processed_directory" ] && mkdir "$processed_directory"
 cd data
 curl -O https://www.dol.gov/sites/dolgov/files/OFCCP/foia/files/FOIA-Log-7.1.23-12.31.23-508c.xlsx
 curl -O https://www.dol.gov/sites/dolgov/files/OFCCP/foia/files/OFCCP-FOIA-Log-1-1-2015-7-6-2023.xlsx
