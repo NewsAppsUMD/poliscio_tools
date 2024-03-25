@@ -3,6 +3,9 @@ name: Labor OFCCP
 on:
   schedule:
     - cron: "0 23 * * *"
+  push:
+    branches:
+      - 'main'
 
 jobs:
   scheduled:
