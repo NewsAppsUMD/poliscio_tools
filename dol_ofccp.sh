@@ -8,4 +8,4 @@ sed 's/ *, */,/g;s/ *$//' foia_log2.csv > foia_log2_fixed.csv
 csvstack foia_log1.csv foia_log2_fixed.csv > combined_foia_log.csv
 csvcut -x combined_foia_log.csv > combined_foia_log_fixed.csv
 cd ..
-python convert.py
+python convert_ofccp.py
