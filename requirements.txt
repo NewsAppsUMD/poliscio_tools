@@ -2,3 +2,4 @@ requests
 csvkit
 datasette
 sqlite_utils
+anthropic
