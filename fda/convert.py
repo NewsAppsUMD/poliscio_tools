@@ -2,6 +2,7 @@ import requests
 import subprocess
 import csv
 import os
+from company_extractor import *
 
 def get_filename_from_url(url):
     response = requests.get(url, allow_redirects=True)
@@ -35,6 +36,8 @@ def process_csv(filename):
     with open(filename, 'r') as original_file:
         reader = csv.DictReader(original_file)
         for row in reader:
+            companies = extract_info(row['Subject'])
+            print(companies)
             output_data.append([None, None, 102, "Food and Drug Administration", row['Control #'], "Not Available", "Not Available", "Not Available", "Not Available", "Not Available", row['Subject'], "Not Available", row['Recd Date'], "Not Available", "Not Available", "Not Available", "Not Available"])
 
     processed_filename = f"../processed/{filename.split('.')[0]}.csv"
